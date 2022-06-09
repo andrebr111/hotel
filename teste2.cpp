@@ -133,6 +133,29 @@ main()
 					break;
 						
 				case 6:
+					break;
+				case 7:
+					float o, r, taxaR, taxaO, taxaT;
+					r = 0;
+					for(i=20; i>=1; i--)
+						for(j= 1 ; j<=14; j++)
+						{
+							if(Mat[i-1][j+1] == 'R')
+								r=r+1;	
+						}
+					o = 0;
+					for(i=20; i>=1; i--)
+						for(j= 1 ; j<=14; j++)
+						{
+							if(Mat[i-1][j+1] == 'O')
+								o=o+1;	
+						}
+					taxaR = r/280 * 100	;
+					taxaO = o/280 * 100;
+					taxaT = (r+o)/280 * 100;
+					printf("\nA taxa de ocupacao e de %5.2f porcento e o de reserva e de %5.2f porcento\n ", taxaO, taxaR);
+					printf("o total de ocupado e reservado e de %5.2f porcento\n", taxaT);	
+					break;
 				
 				case 8:
 					break; 
